@@ -42,8 +42,33 @@ search.send_keys(nameCoin)
 time.sleep(1)
 search.send_keys(Keys.RETURN)
 
+time.sleep(3)
+
+# UpVote
+info = driver.find_element(By.XPATH, """//*[@id="app"]/div/div[2]/div[1]/div/div[4]/div[2]/div[3]/table/tbody/tr[1]/td[1]/div/div""")
+info.click()
+
+
+time.sleep(1)
+
+
+driver.execute_script("window.scrollBy(0, -25);")
+
+
+vote = driver.find_element(By.XPATH, """//*[@id="app"]/div/div[2]/div[1]/div/div[3]/div[2]/button/span""")
+vote.click()
+
+
 
 
 
 
 time.sleep(60)
+
+
+
+
+
+
+
+
