@@ -10,6 +10,3 @@ CN Token is a decentralized that decentralized launchpad that allows users to la
  <br>
 <img width="898" alt="k" src="https://github.com/TreeDev03/articfial_engagement_bot/assets/92409958/e8fb2731-6fd8-4c95-8aaf-39400de0762d">
 
-
-  ## Documentation
- 
