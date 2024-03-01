@@ -11,16 +11,22 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 chrome_options = Options()
-nameCoin = "OpSec"
-   # input("Enter the coin token of your choice: "))
-driver = webdriver.Chrome(options=chrome_options)
 
+nameCoin = "Mini SORA"
+   # input("Enter the coin token of your choice: "))
+
+chrome_options.add_argument("--window-size=1920,1080")
+chrome_options.add_argument("--start-maximized")
+chrome_options.add_argument("--headless")
+
+
+driver = webdriver.Chrome(options=chrome_options)
 
 
 
 action = ActionChains(driver)
 driver.get("https://cntoken.io/coins")
-driver.maximize_window()
+
 time.sleep(1)
 
 
@@ -36,7 +42,7 @@ time.sleep(1)
 search = driver.find_element(By.XPATH, """/html/body/div[1]/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div[1]/input""")
 
 
-time.sleep(1)
+time.sleep(2)
 search.click()
 search.send_keys(nameCoin)
 time.sleep(1)
@@ -57,6 +63,7 @@ driver.execute_script("window.scrollBy(0, -25);")
 
 vote = driver.find_element(By.XPATH, """//*[@id="app"]/div/div[2]/div[1]/div/div[3]/div[2]/button/span""")
 vote.click()
+
 
 
 
